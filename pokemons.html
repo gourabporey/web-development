@@ -38,7 +38,7 @@
       th {
         padding: 0.6em;
         color: #345fab;
-        border-bottom: 1px solid #345fab;
+        /* border-bottom: 1px solid #345fab; */
       }
 
       .pokemon-details th {
@@ -49,11 +49,17 @@
 
       .pokemon-details tbody > tr:hover {
         background-color: #fff0b4;
+        box-sizing: content-box;
+        border-bottom: 1px solid rgba(136, 133, 103, 0.583);
         cursor: pointer;
       }
 
       .pokemon-details tbody > tr > td:hover {
         color: #3554b3;
+      }
+
+      tr:nth-of-type(even) {
+        background-color: #efefefb8;
       }
 
       .pokemon-type {
