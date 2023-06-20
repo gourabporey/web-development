@@ -1,0 +1,154 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+}
+
+.page {
+  width: 50em;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  color: #3467ff;
+}
+
+#pokemon-logo {
+  width: 20em;
+  margin-bottom: 1em;
+}
+
+.pokemon-details {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.pokemon-details > tbody td:nth-child(2) {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.pokemon-details td,
+th {
+  padding: 0.6em;
+  color: #345fab;
+  /* border-bottom: 1px solid #345fab; */
+}
+
+.pokemon-details th {
+  background-color: #345fab;
+  color: white;
+  font-weight: 400;
+}
+
+.pokemon-details tbody > tr:hover {
+  background-color: #fff0b4;
+  box-sizing: content-box;
+  border-bottom: 1px solid rgba(136, 133, 103, 0.583);
+  cursor: pointer;
+}
+
+.pokemon-details tbody > tr > td:hover {
+  color: #3554b3;
+}
+
+tr:nth-of-type(even) {
+  background-color: #efefefb8;
+}
+
+.pokemon-type {
+  padding: 0.3em;
+  font-size: 0.8em;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+}
+
+.grass {
+  background-color: #81aa42;
+  color: #ffffff;
+}
+
+.poison {
+  background-color: #b97fc5;
+  color: white;
+}
+
+.fire {
+  background-color: #fd7d24;
+  color: white;
+}
+
+.flying {
+  background-color: #3dc7ef;
+  color: white;
+}
+
+.water {
+  background-color: #4592c4;
+  color: white;
+}
+
+.bug {
+  background-color: #729f3f;
+  color: white;
+}
+
+.normal {
+  background-color: #919191;
+  color: white;
+}
+
+.electric {
+  background-color: #eed535;
+}
+
+.ground {
+  background-color: #ab9842;
+  color: white;
+}
+
+.psychic {
+  background-color: #f366b9;
+  color: white;
+}
+
+.ghost {
+  background-color: #7b62a3;
+  color: white;
+}
+
+.fairy {
+  background-color: #fdb9e9;
+}
+
+.dark {
+  background-color: #707070;
+  color: white;
+}
+
+.fighting {
+  background-color: #d56523;
+  color: white;
+}
+
+.ice {
+  background-color: #51c4e7;
+  color: white;
+}
+
+.rock {
+  background-color: #a38c21;
+  color: white;
+}
+
+.steel {
+  background-color: #9eb7b8;
+  color: white;
+}
+
+.dragon {
+  background-color: #f06d57;
+  color: white;
+}

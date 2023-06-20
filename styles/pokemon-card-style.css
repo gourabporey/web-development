@@ -1,0 +1,86 @@
+* {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+}
+
+.page {
+  width: 72em;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.page-header img {
+  width: 40%;
+}
+
+.cards-collection {
+  display: table;
+  width: 100%;
+  border-spacing: 1em;
+  color: white;
+}
+
+.cards-row {
+  display: table-row;
+}
+
+.card {
+  display: table-cell;
+  border-radius: 5px;
+  background-color: #d10640a8;
+  border-color: #85353536;
+  border-style: solid;
+  border-width: 5px 5px 10px 10px;
+}
+
+.card table {
+  width: 100%;
+  color: white;
+  border-collapse: collapse;
+}
+
+.card td,
+th {
+  padding: 0.2em;
+}
+
+.properties {
+  padding: 1em;
+}
+
+.pokemon-image {
+  margin: 1em;
+  box-sizing: border-box;
+  background: linear-gradient(#34ffff, hsl(70, 68%, 66%));
+  border-radius: 5px;
+}
+
+.pokemon-image img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.pokemon-name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4em;
+  background-color: #cf6073;
+  text-transform: capitalize;
+}
+
+.property-heading {
+  text-align: left;
+}
+
+.property-data {
+  text-align: right;
+}
+
+.properties tr:hover {
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.044);
+}
