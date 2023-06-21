@@ -1,15 +1,26 @@
 * {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #eef3ff;
 }
 
 .page {
-  width: 72em;
+  width: 80em;
   margin: 0 auto;
 }
 
 .page-header {
   text-align: center;
+  margin: 1em;
+  padding: 1em;
+  background: linear-gradient(#eef3ff, rgba(255, 255, 255, 0.011));
+  position: sticky;
+  top: 0;
 }
 
 .page-header img {
@@ -17,45 +28,47 @@
 }
 
 .cards-collection {
-  display: table;
+  padding: 1em;
   width: 100%;
-  border-spacing: 1em;
-  color: white;
-}
-
-.cards-row {
-  display: table-row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .card {
-  display: table-cell;
-  border-radius: 5px;
-  background-color: #d10640a8;
-  border-color: #85353536;
-  border-style: solid;
-  border-width: 5px 5px 10px 10px;
+  border-radius: 10px;
+  padding: 0.5em;
+  width: 280px;
+  height: 420px;
+  background-color: white;
+  box-shadow: 0 0px 10px gray;
+}
+
+.card:hover {
+  transition: ease;
+  transition-duration: 1s;
+  transform: scale(1.1);
 }
 
 .card table {
-  width: 100%;
-  color: white;
+  width: 85%;
   border-collapse: collapse;
+  margin: 0em 1em;
 }
 
 .card td,
 th {
-  padding: 0.2em;
-}
-
-.properties {
-  padding: 1em;
+  font-size: 13px;
+  color: #454545;
 }
 
 .pokemon-image {
-  margin: 1em;
+  margin: 1em 1em 0.3em 1em;
   box-sizing: border-box;
   background: linear-gradient(#34ffff, hsl(70, 68%, 66%));
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .pokemon-image img {
@@ -65,9 +78,8 @@ th {
 
 .pokemon-name {
   text-align: center;
-  font-weight: 700;
-  font-size: 1.4em;
-  background-color: #cf6073;
+  font-weight: 600;
+  font-size: 1.2em;
   text-transform: capitalize;
 }
 
