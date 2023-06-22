@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: rgb(75, 75, 75);
 }
 
 body {
@@ -48,36 +49,36 @@ body {
 
 .card {
   border-radius: 10px;
-  padding: 0.5em;
-  width: 280px;
-  height: 420px;
+  padding: 0.7em;
+  width: 200px;
+  height: 300px;
   background-color: white;
   box-shadow: 0 0px 10px gray;
-}
-
-.card:hover {
-  transition: ease;
-  transition-duration: 1s;
-  transform: scale(1.05);
-}
-
-.card table {
-  width: 85%;
-  border-collapse: collapse;
-  margin: 0em 1em;
-}
-
-.card td,
-th {
-  font-size: 13px;
-  color: #454545;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
 }
 
 .pokemon-image {
-  margin: 1em 1em 0.3em 1em;
   box-sizing: border-box;
   background: linear-gradient(#34ffff, hsl(70, 68%, 66%));
   border-radius: 7px;
+}
+
+.property {
+  width: 100%;
+  transition: 2s;
+  display: flex;
+  font-size: 0.7em;
+  justify-content: space-between;
+}
+
+.card:hover .property:nth-child(even) {
+  transform: translate(-18em, -6em);
+}
+
+.card:hover .property:nth-child(odd) {
+  transform: translate(18em, -5em);
 }
 
 .pokemon-image img {
@@ -88,7 +89,7 @@ th {
 .pokemon-name {
   text-align: center;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-transform: capitalize;
 }
 
@@ -98,10 +99,4 @@ th {
 
 .property-data {
   text-align: right;
-}
-
-.properties tr:hover {
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.044);
 }
