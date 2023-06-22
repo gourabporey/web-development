@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  /* border: 1px dotted blue; */
+}
+
+.page {
+  width: 1080px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.card {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 410px;
+  width: 280px;
+  border: 1px solid black;
+}
+
+.pokemon-image {
+  width: 80%;
+  aspect-ratio: 1;
+  border: 1px solid blue;
+  align-self: center;
+}
+
+.pokemon-details {
+  align-self: center;
+}
+
+.pokemon-name {
+  text-align: center;
+}
+
+.properties {
+  display: flex;
+  flex-direction: column;
+}
+
+.property {
+  width: 100%;
+  display: flex;
+  transition: 2s;
+}
+
+.property > * {
+  border: 1px solid green;
+  width: 6em;
+}
+
+.card:hover .property:nth-child(even) {
+  transform: translate(-15em, -6em);
+}
+
+.card:hover .property:nth-child(odd) {
+  transform: translate(15em, -5em);
+}

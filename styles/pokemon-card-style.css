@@ -16,15 +16,23 @@ body {
 
 .page-header {
   text-align: center;
-  margin: 1em;
-  padding: 1em;
-  background: linear-gradient(#eef3ff, rgba(255, 255, 255, 0.011));
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #eef3ff;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .page-header img {
-  width: 40%;
+  height: 5em;
+}
+
+.transparent-bottom {
+  height: 2em;
+  position: sticky;
+  top: 6em;
+  background: linear-gradient(#eef3ff, rgba(255, 255, 255, 0.011));
 }
 
 .cards-collection {
@@ -35,6 +43,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  z-index: 2;
 }
 
 .card {
@@ -49,7 +58,7 @@ body {
 .card:hover {
   transition: ease;
   transition-duration: 1s;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card table {
