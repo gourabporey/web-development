@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 18px;
-  /* border: 1px dotted blue; */
 }
 
 .page {
@@ -17,8 +16,8 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
-  height: 410px;
-  width: 280px;
+  height: 540px;
+  width: 360px;
   border: 1px solid black;
 }
 

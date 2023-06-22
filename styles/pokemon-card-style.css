@@ -3,11 +3,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  color: rgb(75, 75, 75);
+  color: rgb(0, 0, 0);
 }
 
 body {
-  background-color: #eef3ff;
+  background: url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/23922676/Pokemon_SV_Worldmap.jpg);
+  background-size: contain;
+  backdrop-filter: blur(10px);
 }
 
 .page {
@@ -17,9 +19,8 @@ body {
 
 .page-header {
   text-align: center;
-  margin: 0.5em;
   padding: 0.5em;
-  background-color: #eef3ff;
+  background: linear-gradient(#0d6ec0, #bce7fd);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -33,7 +34,7 @@ body {
   height: 2em;
   position: sticky;
   top: 6em;
-  background: linear-gradient(#eef3ff, rgba(255, 255, 255, 0.011));
+  background: linear-gradient(#bce7fd, rgba(255, 255, 255, 0));
 }
 
 .cards-collection {
@@ -49,13 +50,14 @@ body {
 
 .card {
   border-radius: 10px;
-  padding: 0.7em;
-  width: 200px;
-  height: 300px;
+  padding: 1em;
+  width: 280px;
+  height: 420px;
   background-color: white;
   box-shadow: 0 0px 10px gray;
   display: flex;
   flex-direction: column;
+  gap: 0.6em;
   height: fit-content;
 }
 
@@ -65,38 +67,53 @@ body {
   border-radius: 7px;
 }
 
+.pokemon-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+
+.properties {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
 .property {
   width: 100%;
   transition: 2s;
   display: flex;
-  font-size: 0.7em;
+  font-size: 1em;
   justify-content: space-between;
 }
 
+.cards-collection:has(.card:hover) .card:not(:hover) {
+  filter: blur(7px);
+}
+
+.card:hover {
+  z-index: 1;
+  scale: 1.02;
+}
+
+.card:hover .property {
+  font-weight: 600;
+}
+
+.card:hover .property > div {
+  text-shadow: 1px 0px 5px rgb(255, 255, 255);
+}
+
 .card:hover .property:nth-child(even) {
-  transform: translate(-18em, -6em);
+  translate: -18em -6em;
 }
 
 .card:hover .property:nth-child(odd) {
-  transform: translate(18em, -5em);
+  translate: 18em -5em;
 }
 
 .pokemon-image img {
   width: 100%;
   aspect-ratio: 1;
-}
-
-.pokemon-name {
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1em;
-  text-transform: capitalize;
-}
-
-.property-heading {
-  text-align: left;
-}
-
-.property-data {
-  text-align: right;
 }
