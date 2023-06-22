@@ -115,11 +115,16 @@ body {
 
   .property {
     width: 80%;
-    font-weight: 600;
-    padding: 0.3em;
-    background-color: rgba(255, 255, 255, 0.541);
-    border: 1px solid black;
+    padding: 0 0.5em;
+    background-color: #45fef87b;
+    border: 1px solid #ff3347;
+    box-shadow: 0 0 5px #ff3347;
     border-radius: 20px;
+    color: white;
+  }
+
+  .pokemon-name {
+    color: #ff3347;
   }
 
   .property > div {
