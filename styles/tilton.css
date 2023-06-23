@@ -1,0 +1,160 @@
+:root {
+  --isabelline-bg-color: #f3f1ee;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: var(--isabelline-bg-color);
+  z-index: -10;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  align-self: center;
+  height: 100px;
+  padding: 1em;
+  width: 95%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid white;
+}
+
+.header-search-box {
+  width: 15%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 70%;
+  height: 70%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 45px;
+  color: black;
+  background-color: white;
+}
+
+.search-icon-container {
+  height: 70%;
+  aspect-ratio: 1;
+
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  width: 35%;
+  aspect-ratio: 1;
+
+  background: url(../images/search-icon-transparent.png);
+  background-size: contain;
+}
+
+.header-nav-bar {
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-logo {
+  width: 20%;
+
+  text-align: right;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.page-welcome-message {
+  width: 45%;
+  height: 720px;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-welcome-message div {
+  font-size: 8em;
+  font-weight: 300;
+
+  color: white;
+
+  animation-name: welcome-message;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+  transform-origin: bottom;
+  transition: all 3s ease;
+}
+
+#page-welcome-line2 {
+  align-self: flex-end;
+}
+
+@keyframes welcome-message {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+
+  50% {
+    transform: perspective(1.5em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(1em);
+  }
+}
+
+#background-one-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  border-width: 0 1em 1em 1em;
+  border-color: solid white;
+  border-style: solid;
+}
+
+#bg-one {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://www.tiltongroup.com/assets/medias/_hero_desktop/HD_tilton_20201103-338-copie.jpg);
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
+  background-size: cover;
+  background-position: 0 -10em;
+  border-radius: 0 0 3em 3em;
+}
