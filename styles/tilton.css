@@ -1,5 +1,8 @@
 :root {
   --isabelline-bg-color: #f3f1ee;
+  --header-height: 100px;
+  --header-z-index: 2;
+  --menu-nav-z-index: 1;
 }
 
 * {
@@ -22,9 +25,10 @@ body {
 
 .page-header {
   align-self: center;
-  height: 100px;
+  height: var(--header-height);
   padding: 1em;
   width: 95%;
+  z-index: var(--header-z-index);
 
   display: flex;
   justify-content: space-between;
@@ -53,6 +57,35 @@ body {
   border-radius: 45px;
   color: black;
   background-color: white;
+
+  transition: all 1s ease;
+}
+
+.page:has(.menu:hover) .menu-nav {
+  top: 0px;
+  opacity: 1;
+}
+
+.menu:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.menu-nav {
+  position: absolute;
+  top: -2000px;
+  width: 100%;
+  height: 840px;
+  opacity: 0;
+  padding-top: var(--header-height);
+  z-index: var(--menu-nav-z-index);
+
+  color: white;
+  background-color: #123937;
+  border-radius: 0 0 25px 25px;
+
+  transition: all 1s ease;
 }
 
 .search-icon-container {
@@ -101,20 +134,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
 
-.page-welcome-message div {
-  font-size: 8em;
-  font-weight: 300;
-
-  color: white;
+  perspective: 500px;
 
   animation-name: welcome-message;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
 
+.page-welcome-message div {
+  font-size: 8em;
+  font-weight: 200;
+  line-height: 1em;
+  color: white;
+
+  animation-name: welcome-message-line;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+
+  transition: all 1s ease;
   transform-origin: bottom;
-  transition: all 3s ease;
 }
 
 #page-welcome-line2 {
@@ -123,17 +163,19 @@ body {
 
 @keyframes welcome-message {
   0% {
+    perspective: 500px;
+  }
+}
+
+@keyframes welcome-message-line {
+  0% {
     opacity: 0;
     transform: rotateX(90deg);
   }
 
-  50% {
-    transform: perspective(1.5em);
-  }
-
   100% {
     opacity: 1;
-    transform: perspective(1em);
+    transform: none;
   }
 }
 
